@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Route } from "wouter";
 // Screens
 import Landing from "./screens/Landing.jsx";
 
@@ -11,7 +12,9 @@ export default function App() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap" rel="stylesheet" />
       </Helmet>
-      <Landing />
+      <Route path="/" component={Landing} />
+      <Route path="/login">Login</Route>
+      <Route path="/signup">signup</Route>
     </>
   );
 }
